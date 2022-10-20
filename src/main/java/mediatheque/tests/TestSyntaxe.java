@@ -1,5 +1,7 @@
 package mediatheque.tests;
 
+import util.ToolBox;
+
 import java.time.LocalTime;
 import java.time.Year;
 
@@ -128,5 +130,10 @@ public class TestSyntaxe {
 
         saluer("ffff",1);
         saluer("rrrr",2);
+
+        // tirer une valeur comprise entre 64 et 227
+        System.out.println(ToolBox.getRandomValue(64,227));
+
+        System.out.println(ToolBox.getRandomLocalDate(1937,2022));
     }
 }

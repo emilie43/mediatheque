@@ -19,14 +19,14 @@ public class Personne {
     }
 
     //methodes
-    public Personne(String nom, String prenom) {
+    public Personne(String nom, String prenom) throws Exception {
         setNom(nom);
         setPrenom(prenom);
         // creation carte + ranger dans la poche de la personne
         setCarte(new Carte (this));
     }
 
-    public Personne(String nom, String prenom, String dateNaissance) {
+    public Personne(String nom, String prenom, String dateNaissance) throws Exception {
         this(nom,prenom);
         setDateNaissance(LocalDate.parse(dateNaissance));
     }
@@ -43,13 +43,13 @@ public class Personne {
 
 
 
-    public void setNom(String propositionNom) {
+    public void setNom(String propositionNom) throws Exception {
         if(propositionNom.length() >=3 ){
             nom = propositionNom;
         }
         else{
-            System.out.println("invalide");
-            nom = propositionNom;
+            throw new Exception("le nom est invalide");
+
         }
 
     }

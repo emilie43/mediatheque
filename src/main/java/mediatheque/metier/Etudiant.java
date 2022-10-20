@@ -4,7 +4,7 @@ public class Etudiant extends Adherent{
     private Universite universite;
 
 
-    public Etudiant(String nom, String prenom, String dateNaissance, Universite uni) {
+    public Etudiant(String nom, String prenom, String dateNaissance, Universite uni) throws Exception {
         super(nom, prenom, dateNaissance);
         setUniversite(uni);
     }
